@@ -2,6 +2,8 @@ package com.workshop.sb.testworkshop.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
+//ini yang urusan dengan Json terima maupun kirim
 public class DriverRequest {
 
     @JsonProperty("id")

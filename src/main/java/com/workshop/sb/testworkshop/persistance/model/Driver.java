@@ -2,6 +2,9 @@ package com.workshop.sb.testworkshop.persistance.model;
 
 import com.workshop.sb.testworkshop.model.DriverRequest;
 
+
+//ini yang urusan dengan database (buat atau lainnya)
+
 import javax.persistence.*;
 
 @Entity
@@ -33,6 +36,9 @@ public class Driver {
         this.id_number = request.getId_number();
         this.address = request.getAddress();
         this.salary = request.getSalary();
+    }
+
+    public Driver() {
     }
 
     public Integer getId() {
