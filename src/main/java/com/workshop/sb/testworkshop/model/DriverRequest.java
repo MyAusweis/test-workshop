@@ -1,39 +1,26 @@
-package com.workshop.sb.testworkshop.persistance.model;
+package com.workshop.sb.testworkshop.model;
 
-import com.workshop.sb.testworkshop.model.DriverRequest;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import javax.persistence.*;
+public class DriverRequest {
 
-@Entity
-public class Driver {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonProperty("id")
     private Integer id;
 
-    @Column(name= "name",length = 50,nullable = false)
+    @JsonProperty("name")
     private String name;
 
-    @Column(name="phone_number", length =20,nullable = false)
+    @JsonProperty("phone_number")
     private String phone_number;
 
-    @Column(name="id_number", length = 50,nullable = false)
+    @JsonProperty("id_number")
     private String id_number;
 
-    @Column(name="address", length =300,nullable = false)
+    @JsonProperty("address")
     private String address;
 
-    @Column(name="salary", length =10,nullable = false)
+    @JsonProperty("salary")
     private double salary;
-
-    public Driver(DriverRequest request) {
-        this.id = request.getId();
-        this.name = request.getName();
-        this.phone_number = request.getPhone_number();
-        this.id_number = request.getId_number();
-        this.address = request.getAddress();
-        this.salary = request.getSalary();
-    }
 
     public Integer getId() {
         return id;
