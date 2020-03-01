@@ -20,7 +20,7 @@ public class DriverService {
     private DriverRepository driverRepository;
 
     public void AddNewDriver(DriverRequest request) throws Exception {
-        Driver driverData = new Driver(request);
+        Driver driverData = new Driver(request);  //driver data formatnya driver dengan isi dari DriverRequest(data from jason)
         driverRepository.save(driverData);
     }
 

@@ -11,12 +11,13 @@ import java.util.List;
 
 
 //Urusan terima dari API
-
+@CrossOrigin(origins = "*",allowedHeaders = "*")
 @RestController
 public class DriverController {
 
     @Autowired
     DriverService driverService;
+
 
     @PostMapping("/driver")
     public ResponseEntity AddNewDriver(@RequestBody DriverRequest request) {
@@ -31,6 +32,7 @@ public class DriverController {
         }
     }
 
+
     @RequestMapping(value = "/driver/delete/{id}", method = RequestMethod.DELETE)
         public ResponseEntity DeleteDriverData(@PathVariable("id") Integer id) {
 
@@ -44,6 +46,7 @@ public class DriverController {
         }
     }
 
+
     @RequestMapping(value = "/driver/get/{id}", method = RequestMethod.GET)
     public Driver GetDriverDataById(@PathVariable("id") Integer id) {
 
@@ -56,7 +59,8 @@ public class DriverController {
             }
          }
 
-    @RequestMapping(value = "/driver/all", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/driver/get/all", method = RequestMethod.GET)
     public List<Driver> GetDriverDataAll() {
 
         try {
