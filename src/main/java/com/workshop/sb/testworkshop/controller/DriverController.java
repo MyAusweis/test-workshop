@@ -11,7 +11,7 @@ import java.util.List;
 
 
 //Urusan terima dari API
-@CrossOrigin(origins = "*",allowedHeaders = "*")
+@CrossOrigin(origins = "*")
 @RestController
 public class DriverController {
 
